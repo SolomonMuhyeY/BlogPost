@@ -1,0 +1,12 @@
+.item-container .item {
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 4px;
+  margin-left: 4px;
+  transition: linear 0.25s;
+}
+.item-container .item:hover {
+  background: linear-gradient(to bottom, #454545, #ebd9d9);
+  padding: 4px 0;
+  color: aliceblue;
+}
