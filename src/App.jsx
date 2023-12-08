@@ -1,23 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-
+import PostContainer from "./components/PostContainer";
+import Sidebar from "./components/Sidebar";
 function App() {
   return (
-    <>
-      <h1 className='text-4xl'>
-        <FontAwesomeIcon icon={faFacebookF} />
-      </h1>
-      <h1>
-        <FontAwesomeIcon icon={faInstagram} />
-      </h1>{" "}
-      <h1>
-        <FontAwesomeIcon icon={faTwitter} />
-      </h1>
-    </>
+    <div className='App'>
+      <Sidebar />
+      <PostContainer />
+    </div>
   );
 }
 
