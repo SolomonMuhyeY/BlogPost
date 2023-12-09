@@ -5,7 +5,7 @@ export const samplePosts = [
     title: "About Internet!",
     content:
       "Are they going to release it, soon or what ? this is one of our main agenda for the week.",
-    author: "Farac Chiuno",
+    author: "KOUld SHouNls",
     authImage: authImage,
     reactions: {
       thumbsUp: 0,
@@ -16,7 +16,7 @@ export const samplePosts = [
   },
   {
     id: crypto.randomUUID(),
-    title: "About Internet!",
+    title: "About Ethiopia!",
     content:
       "Are they going to release it, soon or what ? this is one of our main agenda for the week.Are they going to release it, soon or what ? this is one of our main agenda for the week.Are they going to release it, soon or what ? this is one of our main agenda for the week.",
     author: "Farac Chiuno",
@@ -33,7 +33,7 @@ export const samplePosts = [
     title: "About Internet!",
     content:
       "Are they going to release it, soon or what ? this is one of our main agenda for the week.Are they going to release it, soon or what ? this is one of our main agenda for the week.",
-    author: "Farac Chiuno",
+    author: "Muchiah Meknos",
     authImage: authImage,
     reactions: {
       thumbsUp: 0,
