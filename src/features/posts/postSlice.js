@@ -31,6 +31,12 @@ const postSlice = createSlice({
         };
       },
     },
+    updatePost: (state, action) => {
+      const { id, title } = action.payload;
+      console.log(title);
+      const currentPost = state.posts.find((post) => post.id === Number(id));
+      state.posts.push(currentPost);
+    },
     reactionAdded: (state, action) => {
       const { postId, reaction } = action.payload;
       const currentPost = state.posts.find((post) => post.id === postId);
@@ -39,6 +45,6 @@ const postSlice = createSlice({
   },
 });
 
-export const { reactionAdded } = postSlice.actions;
+export const { reactionAdded, updatePost } = postSlice.actions;
 export const selectAllPosts = (state) => state.posts;
 export const postReducer = postSlice.reducer;
