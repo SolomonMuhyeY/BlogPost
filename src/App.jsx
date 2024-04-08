@@ -1,18 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectAllPosts } from "./features/posts/postSlice";
 import PostContainer from "./components/PostContainer";
 import Layout from "./components/Layout";
 import SinglePost from "./components/SinglePost";
+import EditPost from "./components/EditPost";
 function App() {
+  const { posts } = useSelector(selectAllPosts);
+
   return (
     <div className='App'>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route index element={<PostContainer />} />
-            <Route path='/:id' element={<SinglePost />} />
-          </Route>
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<PostContainer />} />
+          <Route path='post/:id' element={<SinglePost posts={posts} />}></Route>
+          <Route path='post/:id/edit' element={<EditPost posts={posts} />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
