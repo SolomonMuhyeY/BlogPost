@@ -8,13 +8,13 @@ const Post = () => {
     return (
       <div
         key={post.id}
-        className='bg-white ml-16 border-2 my-8 p-6 md:w-4/5 m-auto'
+        className='bg-white ml-16 border-1 my-8 p-6 md:w-4/5 m-auto rounded-xl'
       >
         <div className='abt-author text-center pb-3'>
           <div className='w-32 h-32 my-2 m-auto rounded-full overflow-hidden '>
             <img
               className='h-full duration-500  hover:scale-105'
-              src={post.authImage}
+              src={post.image}
               alt="auhtor's image"
             />
           </div>
@@ -26,7 +26,10 @@ const Post = () => {
         <div className='md:w-3/4 m-auto'>
           <p>{post.content}</p>
           <Reactions post={post} />
-          <Link to={`${post.id}`} className='text-xs underline text-blue-400'>
+          <Link
+            to={`post/${post.id}`}
+            className='text-xs underline text-blue-400'
+          >
             View Post
           </Link>
         </div>
