@@ -8,7 +8,7 @@ const Post = () => {
     return (
       <div
         key={post.id}
-        className='bg-white ml-16 border-1 my-8 p-6 md:w-4/5 m-auto rounded-xl'
+        className='ml-16 border-1 my-8 p-6 md:w-4/5 m-auto rounded-xl'
       >
         <div className='abt-author text-center pb-3'>
           <div className='w-32 h-32 my-2 m-auto rounded-full overflow-hidden '>
@@ -20,7 +20,7 @@ const Post = () => {
           </div>
           <p className='font-extralight text-sm text-lime-400'>{post.author}</p>
         </div>
-        <p className='text-center pb-3 text-4xl font-bold font-mono'>
+        <p className='text-center leading-snug pb-3 text-2xl font-bold font-mono'>
           {post.title}
         </p>
         <div className='md:w-3/4 m-auto'>
