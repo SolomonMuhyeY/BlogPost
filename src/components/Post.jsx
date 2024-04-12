@@ -8,7 +8,7 @@ const Post = () => {
     return (
       <div
         key={post.id}
-        className='border-2 border-gray-700 m-3 p-4 rounded-xl'
+        className='border-2 border-slate-700 m-3 p-4 rounded-xl'
       >
         <div className='text-center pb-3'>
           <div className='w-32 h-32 my-2 m-auto rounded-full overflow-hidden '>
@@ -23,7 +23,7 @@ const Post = () => {
         <p className='text-center leading-snug pb-3 text-2xl font-bold font-mono'>
           {post.title}
         </p>
-        <div className=''>
+        <div className='text-justify px-3'>
           <p>{post.content}</p>
           <Reactions post={post} />
           <Link
