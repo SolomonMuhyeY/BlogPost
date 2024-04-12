@@ -47,7 +47,11 @@ const Reactions = ({ post }) => {
       </button>
     );
   });
-  return <div className='flex py-2'>{rxnBtns}</div>;
+  return (
+    <div className='flex justify-center font-thin font-serif py-2'>
+      {rxnBtns}
+    </div>
+  );
 };
 
 export default Reactions;
