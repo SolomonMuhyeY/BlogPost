@@ -8,3 +8,7 @@ body::-webkit-scrollbar {
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.header {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
