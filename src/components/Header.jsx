@@ -1,12 +1,23 @@
 import { faMagento, faUps } from "@fortawesome/free-brands-svg-icons";
-import { faBell, faM, faS, faSearch } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBell,
+  faM,
+  faMoon,
+  faS,
+  faSearch,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 function Header() {
   const [counter, setCounter] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
   function incrementNotf() {
     setCounter((prev) => prev + 1);
+  }
+  function toggleDarkMode() {
+    setDarkMode((prev) => !prev);
   }
   return (
     <nav className='grid grid-cols-4 justify-center items-center py-2'>
@@ -46,6 +57,16 @@ function Header() {
           </li>
           <li className='hover:scale-110 transition-all duration-200 hover:text-slate-400'>
             <FontAwesomeIcon icon={faUps} />
+          </li>
+          <li
+            onClick={toggleDarkMode}
+            className='hover:scale-110 hover:rotate-180 transition-all duration-200 hover:text-slate-400'
+          >
+            {darkMode ? (
+              <FontAwesomeIcon icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon icon={faSun} />
+            )}
           </li>
         </ul>
       </div>
