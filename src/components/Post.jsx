@@ -8,9 +8,9 @@ const Post = () => {
     return (
       <div
         key={post.id}
-        className='ml-16 border-1 my-8 p-6 md:w-4/5 m-auto rounded-xl'
+        className='border-2 border-gray-700 m-3 p-4 rounded-xl'
       >
-        <div className='abt-author text-center pb-3'>
+        <div className='text-center pb-3'>
           <div className='w-32 h-32 my-2 m-auto rounded-full overflow-hidden '>
             <img
               className='h-full duration-500  hover:scale-105'
@@ -23,7 +23,7 @@ const Post = () => {
         <p className='text-center leading-snug pb-3 text-2xl font-bold font-mono'>
           {post.title}
         </p>
-        <div className='md:w-3/4 m-auto'>
+        <div className=''>
           <p>{post.content}</p>
           <Reactions post={post} />
           <Link
@@ -36,7 +36,11 @@ const Post = () => {
       </div>
     );
   });
-  return <div>{indvPost}</div>;
+  return (
+    <div className='grid md:grid-cols-2 gap-8 mx-5 justify-center'>
+      {indvPost}
+    </div>
+  );
 };
 
 export default Post;
