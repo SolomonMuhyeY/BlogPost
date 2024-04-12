@@ -1,12 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-body {
-  background-color: azure;
-}
+
 body::-webkit-scrollbar {
   display: none;
 }
 p {
-  font-family: "Times New Roman", Times, serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
