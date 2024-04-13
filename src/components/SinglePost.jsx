@@ -13,14 +13,11 @@ const SinglePost = ({ posts }) => {
   };
   const currentPost = posts.find((post) => post.id === parseInt(id));
   return (
-    <section
-      key={currentPost.id}
-      className='bg-white border-2 my-24 p-6 ml-24 w-3/4 md:w-3/5 m-auto'
-    >
+    <section key={currentPost.id} className='relative'>
       <div>
         <button
           onClick={goBack}
-          className='bg-brightRed py-1.5 px-2.5 rounded duration-500 hover:scale-105'
+          className='absolute left-0 py-1.5 px-2.5  duration-500 hover:scale-105'
         >
           <i className='px-1.5'>
             <FontAwesomeIcon icon={faLeftLong} />
