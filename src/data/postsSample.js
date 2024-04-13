@@ -4,10 +4,10 @@ import car from "../assets/car.jpg";
 export const samplePosts = [
   {
     id: 1,
-    title: "Gbi Life : Therefor Day: 👀",
+    title: "የግቢ ህይወት ፡ የ ዜርፎር ቀን",
     content:
       "Are they going to release it, soon or what ? this is one of our main agenda for the week.",
-    author: "Stone Age life ...",
+    author: "አትጠገብ በላይነህ",
     department: "Software Enginnering",
     image: man,
     reactions: {
