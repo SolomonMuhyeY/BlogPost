@@ -10,7 +10,7 @@ const Post = () => {
     return (
       <div
         key={post.id}
-        className='border-2 border-slate-700 px-1 py-3 rounded-xl'
+        className='border-2 border-slate-900 bordr-[1px]  px-1 py-3 rounded-xl'
       >
         <div className='flex mx-2'>
           <FontAwesomeIcon icon={faCircleUser} />
