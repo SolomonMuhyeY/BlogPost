@@ -25,7 +25,7 @@ const EditPost = ({ posts }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className='w-3/5 my-12 py-4 flex flex-col gap-4 border-2 m-auto text-center'
+      className='w-3/5 my-12 py-4 flex flex-col gap-4 border-2 m-auto text-center text-black'
     >
       <div className='flex justify-center gap-2'>
         <label htmlFor='title'>Title</label>
