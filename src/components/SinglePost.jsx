@@ -52,7 +52,7 @@ const SinglePost = ({ posts }) => {
         {currentPost.title}
       </p>
       <div className='w-3/4 m-auto'>
-        <p>{currentPost.content}</p>
+        <p className='text-sm font-serif'>{currentPost.content}</p>
         <Reactions post={currentPost} />
         <Link to={`edit`} className='text-xs underline text-blue-400'>
           Edit Post
