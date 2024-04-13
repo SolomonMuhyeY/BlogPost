@@ -12,7 +12,7 @@ const Sidebar = () => {
   return (
     <>
       <div className='item-container fixed w-full'>
-        <Link className='item flex border-b-2 border-slate-700'>
+        <Link to='/' className='item flex border-b-2 border-slate-700'>
           <i className='bg-transparent px-5'>
             <FontAwesomeIcon icon={faBloggerB} />
           </i>
