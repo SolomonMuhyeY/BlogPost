@@ -3,7 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Reactions from "./Reactions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLeftLong } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowAltCircleLeft,
+  faCircleUser,
+} from "@fortawesome/free-solid-svg-icons";
 const SinglePost = ({ posts }) => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -13,41 +16,49 @@ const SinglePost = ({ posts }) => {
   };
   const currentPost = posts.find((post) => post.id === parseInt(id));
   return (
-    <section key={currentPost.id} className='relative'>
+    <div key={currentPost.id} className='my-6'>
       <div>
         <button
           onClick={goBack}
-          className='absolute left-0 py-1.5 px-2.5  duration-500 hover:scale-105'
+          className='absolute left-0 py-1.5 px-2.5 hover:text-green-200 duration-300 hover:scale-105'
         >
           <i className='px-1.5'>
-            <FontAwesomeIcon icon={faLeftLong} />
+            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
           </i>
           Go Back
         </button>
       </div>
-      <div className='abt-author text-center pb-3'>
-        <div className='w-32 h-32 my-2 m-auto rounded-full overflow-hidden '>
+      <div className='flex justify-center'>
+        <div>
+          <div className='flex gap-1'>
+            <FontAwesomeIcon icon={faCircleUser} />
+            <p className='font-extralight text-sm text-lime-400'>
+              {currentPost.author}
+            </p>
+          </div>
+          <p className='text-xs italic'>{currentPost.department}</p>
+        </div>
+      </div>
+      <div className='text-center pb-3 my-6'>
+        <div className='rounded-xl w-4/5 h-64 mx-auto overflow-hidden '>
           <img
-            className='h-full duration-500  hover:scale-105'
+            className='w-full object-cover h-full duration-500  hover:scale-105'
             src={currentPost.image}
             alt="auhtor's image"
           />
         </div>
-        <p className='font-extralight text-sm text-lime-400'>
-          {currentPost.author}
-        </p>
       </div>
-      <p className='text-center pb-3 text-4xl font-bold font-mono'>
+      <p className='text-center pb-3 text-3xl font-bold font-mono'>
         {currentPost.title}
       </p>
-      <div className='md:w-3/4 m-auto'>
+      <div className='w-3/4 m-auto'>
         <p>{currentPost.content}</p>
         <Reactions post={currentPost} />
         <Link to={`edit`} className='text-xs underline text-blue-400'>
           Edit Post
         </Link>
       </div>
-    </section>
+    </div>
   );
 };
 
