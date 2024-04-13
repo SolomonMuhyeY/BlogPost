@@ -3,11 +3,7 @@ import { useSelector } from "react-redux";
 import { selectAllPosts } from "../features/posts/postSlice";
 import Reactions from "./Reactions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleDot,
-  faCircleUser,
-  faContactBook,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 const Post = () => {
   const { posts } = useSelector(selectAllPosts);
   const indvPost = posts.map((post) => {
