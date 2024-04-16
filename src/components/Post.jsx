@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "../features/posts/postSlice";
 import Reactions from "./Reactions";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+import { UserCircleIcon } from "@heroicons/react/24/outline";
 const Post = () => {
   const { posts } = useSelector(selectAllPosts);
   const indvPost = posts.map((post) => {
@@ -13,7 +12,7 @@ const Post = () => {
         className='border-2 border-slate-900 bordr-[1px]  px-1 py-3 rounded-xl'
       >
         <div className='flex mx-2'>
-          <FontAwesomeIcon icon={faCircleUser} />
+          <UserCircleIcon className='h-6 w-6' />
           <div className='mx-2'>
             <p className='font-extralight text-sm text-justify text-lime-400'>
               {post.author}
