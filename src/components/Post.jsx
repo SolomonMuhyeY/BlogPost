@@ -17,7 +17,9 @@ const Post = () => {
             <p className='font-extralight text-sm text-justify text-lime-400'>
               {post.author}
             </p>
-            <p className='text-xs italic font-extralight'>{post.department}</p>
+            <p className='text-xs font-serif italic font-extralight'>
+              {post.department}
+            </p>
           </div>
         </div>
         <div className='text-center pb-3'>
