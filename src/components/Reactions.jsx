@@ -1,39 +1,12 @@
 /* eslint-disable react/prop-types */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { reactionAdded } from "../features/posts/postSlice";
 import { useDispatch } from "react-redux";
-import {
-  faFire,
-  faHeart,
-  faThumbsDown,
-  faThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { reactionIcons } from "../utils/ReactionIcons";
+
 const Reactions = ({ post }) => {
   const dispatch = useDispatch();
-  const reactionIcons = {
-    thumbsUp: (
-      <i className='text-yellow-500'>
-        <FontAwesomeIcon icon={faThumbsUp} />
-      </i>
-    ),
-    thumbsDown: (
-      <i className='text-gray-300'>
-        <FontAwesomeIcon icon={faThumbsDown} />
-      </i>
-    ),
-    heart: (
-      <i className='text-green-500'>
-        <FontAwesomeIcon icon={faHeart} />
-      </i>
-    ),
-    fire: (
-      <i className='text-red-500'>
-        <FontAwesomeIcon icon={faFire} />
-      </i>
-    ),
-  };
+
   const rxnBtns = Object.entries(reactionIcons).map(([name, rxn]) => {
-    // console.log(post);
     return (
       <button
         onClick={() =>
