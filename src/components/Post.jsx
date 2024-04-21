@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "../features/posts/postSlice";
 import Reactions from "./Reactions";
-import { UserCircleIcon } from "@heroicons/react/24/outline";
+import { BookmarkIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 const Post = () => {
+  function addToBookMark() {
+    alert("Bookmark Added!");
+  }
   const { posts } = useSelector(selectAllPosts);
   const indvPost = posts.map((post) => {
     return (
@@ -35,7 +38,12 @@ const Post = () => {
           </div>
         </div>
         <div className='text-justify px-3'>
-          <Reactions post={post} />
+          <div className='flex justify-center items-center'>
+            <Reactions post={post} />
+            <button onClick={addToBookMark}>
+              <BookmarkIcon className='w-4 h-4' />
+            </button>
+          </div>
           <Link
             to={`post/${post.id}`}
             className='text-xs underline text-blue-400'
